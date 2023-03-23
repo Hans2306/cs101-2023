@@ -3,10 +3,10 @@
 void replace_all(char *str, char oldChar, char newChar){
     int len=0;
     while(str[len]!= '\0'){
-      len++;
+        len++;
     }
     for(int i=0;i<len;i++){
-      str[i]=(str[i]==oldChar)?newChar:oldChar;
+        str[i]=(str[i]==oldChar)?newChar:oldChar;
     }
 }
 
