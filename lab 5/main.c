@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+typedef int (*calc_int_func)(int, int);
+
 int add(int x, int y){
     return x+y;
 }
@@ -16,8 +18,8 @@ int div(int x, int y){
     return x/y;
 }
  
-int calc(int (*func_ptr)(int,int), int x, int y){
-    return func_ptr(x, y);
+int calc(calc_int_func func_ptr, int x, int y){
+    return func_ptr(x,y);
 }
 
 int main()
